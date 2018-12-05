@@ -10,7 +10,7 @@ node px2rem
   "path": ["./css", "./views"],
   // 是否对压缩.min.js进行操作
   "minJs": "false",
-  // 压缩文件类型
+  // 转rem文件类型
   "filterTypes": ["css", "scss", "html", "less", "styl", "vue"]
 }
 
