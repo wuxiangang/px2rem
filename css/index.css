@@ -1,0 +1,11 @@
+html {
+	font-size: 80px; /*no*/
+}
+
+@media screen  and (max-width: 800px) {
+
+}
+
+body {
+	width: 30px
+}

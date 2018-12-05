@@ -22,15 +22,15 @@ function transform (file, fontPath, e) {
 			})
 		})
 	} else {
-		if (!types.includes(file.match(/\.((?!\.).)*$/)[0].replace(/\./, ''))) return
+		const p = file.match(/\.((?!\.).)*$/);
+		if (!p || !types.includes(p[0].replace(/\./, ''))) return
 		if (config.minJs === 'false' && file.includes('.min')) return
 			console.log(currentPath)
 		fs.readFile(currentPath,'utf8',function(err,files){
-			var result = files.replace(/\d+px(?!(\s*\)))/g, callback);
+			var result = files.replace(/\d+px(?!(\s*(\)|\;\s*\/\*no)))/gi, callback);
 			fs.writeFile(currentPath, result, 'utf8', function (err) {
 			     if (err) return console.log(err);
 			});
- 
 		})
 	}
 }	
