@@ -7,26 +7,31 @@ html {
 }
 
 body {
-	width: 30px
+	width: 1.5rem;
+	width: 64rem!important
 }
 
 .cc {
-	height: calc(100vh - 60px);
+	height: calc(100vh - 3rem);
+	width: 1280px !important; /*no*/
 }
 
 .aa {
+	width: 1280px !important; /*no*/
 	height: calc(100vh - 60px); /*no*/
 }
 
 /*stylus*/
-@media screen  and (max-width: 800px)
-	.aa 
-		height 40px
-		width calc( 100% -  200px )
+@media screen  and (max-width: 800rem)
+	.aa
+		height 2rem
+		width calc( 100% -  200rem )
 	.column-count
 		width calc( 100% -  200px ) /*no*/
+		width 64rem !important
 
 
 @media screen  and (max-width: 800px) /*no*/
 	.aa 
-		height 40px
+		height 2rem
+		width 1280px !important /*no*/

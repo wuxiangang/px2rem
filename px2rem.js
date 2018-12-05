@@ -27,7 +27,7 @@ function transform (file, fontPath, e) {
 		if (config.minJs === 'false' && file.includes('.min')) return
 			console.log(currentPath)
 		fs.readFile(currentPath,'utf8',function(err,files){
-			var result = files.replace(/\d+px(?!(\s*(\)\s*\{|\)*\;*\s*\/\*no)))/gi, callback);
+			var result = files.replace(/\d+px(?!(\s*(\!\s*important\s*)*(\)\s*\{|\)*\;*\s*\/\*no)))/gi, callback);
 			fs.writeFile(currentPath, result, 'utf8', function (err) {
 			     if (err) return console.log(err);
 			});
