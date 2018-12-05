@@ -9,3 +9,24 @@ html {
 body {
 	width: 30px
 }
+
+.cc {
+	height: calc(100vh - 60px);
+}
+
+.aa {
+	height: calc(100vh - 60px); /*no*/
+}
+
+/*stylus*/
+@media screen  and (max-width: 800px)
+	.aa 
+		height 40px
+		width calc( 100% -  200px )
+	.column-count
+		width calc( 100% -  200px ) /*no*/
+
+
+@media screen  and (max-width: 800px) /*no*/
+	.aa 
+		height 40px
