@@ -10,7 +10,9 @@ function exists(path){
 } 
 
 function callback (v, a, c) {
-	return parseInt(v) / htmlpx + 'rem'
+	const n = parseInt(v);
+	if (n === 1) return v;
+	return n / htmlpx + 'rem'
 }
 
 function transform (file, fontPath, e) {
